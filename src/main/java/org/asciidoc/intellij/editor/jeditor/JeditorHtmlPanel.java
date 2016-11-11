@@ -46,7 +46,7 @@ final class JeditorHtmlPanel extends AsciiDocHtmlPanel {
     // Create an AsciiDoc style, based on the default stylesheet supplied by UiUtil.getHTMLEditorKit()
     // since it contains fix for incorrect styling of tooltips
     final String cssFile = isDarcula() ? "darcula.css" : "preview.css";
-    final StyleSheet customStyle = loadStyleSheet(JeditorHtmlPanel.class.getResource(cssFile));
+    final StyleSheet customStyle = loadStyleSheet(JeditorHtmlPanel.class.getClassLoader().getResource(cssFile));
     final StyleSheet style = UIUtil.getHTMLEditorKit().getStyleSheet();
     style.addStyleSheet(customStyle);
     kit.setStyleSheet(style);
