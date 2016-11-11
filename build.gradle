@@ -25,3 +25,7 @@ intellij {
 //    intellij.alternativeIdePath = '/Applications/Android Studio.app'
 }
 
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
