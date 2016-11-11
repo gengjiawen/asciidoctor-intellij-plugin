@@ -1,14 +1,23 @@
 buildscript {
     repositories {
+        jcenter()
         maven { url 'http://dl.bintray.com/jetbrains/intellij-plugin-service' }
     }
 }
+
+
 plugins {
     id "org.jetbrains.intellij" version "0.1.10"
 }
 
 apply plugin: 'org.jetbrains.intellij'
 apply plugin: 'java'
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
 
 intellij {
     version 'IC-2016.2.5'
@@ -28,4 +37,12 @@ intellij {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'org.asciidoctor:asciidoctorj:1.5.4'
+    compile 'commons-io:commons-io:2.4'
+    testCompile 'junit:junit:4.12'
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2'
+    distributionUrl = distributionUrl.replace("bin", "all")
 }
