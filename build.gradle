@@ -31,7 +31,8 @@ intellij {
 //    }
 
 //     Uncomment to test against Android Studio
-//    intellij.alternativeIdePath = '/Applications/Android Studio.app'
+    intellij.alternativeIdePath = '/Applications/Android Studio.app'
+    systemProperty 'idea.is.internal', 'false'
 }
 
 
