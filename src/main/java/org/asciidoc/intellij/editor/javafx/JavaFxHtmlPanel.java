@@ -94,10 +94,11 @@ public class JavaFxHtmlPanel extends AsciiDocHtmlPanel {
         .replaceAll(":", "%3A");
 
     try {
-      myInlineCss = IOUtils.toString(JavaFxHtmlPanel.class.getResourceAsStream("default.css"));
-      myInlineCssDarcula = myInlineCss + IOUtils.toString(JavaFxHtmlPanel.class.getResourceAsStream("darcula.css"));
-      myInlineCssDarcula += IOUtils.toString(JavaFxHtmlPanel.class.getResourceAsStream("coderay-darcula.css"));
-      myInlineCss += IOUtils.toString(JavaFxHtmlPanel.class.getResourceAsStream("coderay.css"));
+      ClassLoader classLoader = JavaFxHtmlPanel.class.getClassLoader();
+      myInlineCss = IOUtils.toString(classLoader.getResourceAsStream("default.css"));
+      myInlineCssDarcula = myInlineCss + IOUtils.toString(classLoader.getResourceAsStream("darcula.css"));
+      myInlineCssDarcula += IOUtils.toString(classLoader.getResourceAsStream("coderay-darcula.css"));
+      myInlineCss += IOUtils.toString(classLoader.getResourceAsStream("coderay.css"));
     }
     catch (IOException e) {
       String message = "Error rendering asciidoctor: " + e.getMessage();

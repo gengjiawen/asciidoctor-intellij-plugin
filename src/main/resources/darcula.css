@@ -1,158 +1,53 @@
-/* Theme inspired by the default Asciidoctor stylesheet */
-body {
-  background-color: #45494a;
-  color: #bbbbbb;
-}
+#content>h1:first-child:not([class]), body {background-color: #45494a;color: #bbbbbb}
+pre {color: #bbbbbb}
+pre>code, *:not(pre)>code, .hljs {background-color: #626262;color: #bbbbbb}
+a, a:hover, a:focus { color: #589df6; }
 
-#content {
-  padding: 10px;
-}
+table.tableblock, th.tableblock, td.tableblock{color: #bbbbbb}
 
-h1, h2, h3, .sidebarblock .content, .title, h4, h5, h6 {
-  font-family: Georgia, "URW Bookman L", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #ba3925;
-  margin-top: 12px;
-  margin-bottom: 6px;
-  line-height: 1.2125;
-}
+/* was: rgba(0,0,0,.8) */
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{color: #bbbbbb}
+abbr,acronym{color: #bbbbbb}
+table tr th,table tr td{color: #bbbbbb}
+kbd{color: #bbbbbb}
+.menuseq,.menu{color: #bbbbbb}
+#footer{color: #bbbbbb}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color: #bbbbbb}
+.conum[data-value]{color: #bbbbbb}
 
-h1 {
-  font-size: 26px;
-}
+/* was: rgba(0,0,0,.85) */
+.paragraph.lead>p,#preamble>.sectionbody>.paragraph:first-of-type p{color: #bbbbbb}
+.quoteblock blockquote,.quoteblock blockquote p{color: #bbbbbb}
+.verseblock pre{color: #bbbbbb}
+#content>h1:first-child:not([class]){color: #bbbbbb}
+#header .details br+span.author:before{color: #bbbbbb}
+#header .details span.email a{color: #bbbbbb}
+#header>h1:first-child{color: #bbbbbb}
+blockquote,blockquote p{color: #bbbbbb}
 
-h2 {
-  font-size: 20px;
-}
+/* was: rgba(0,0,0,.6) */
+blockquote cite a,blockquote cite a:visited {color: #bbbbbb}
+#header .details{color: #bbbbbb}
+.admonitionblock>table td.content{color: #bbbbbb}
+.quoteblock .quoteblock{color: #bbbbbb}
+.quoteblock .attribution cite,.verseblock .attribution cite{color: #bbbbbb}
 
-h3, .sidebarblock .content .title {
-  font-size: 16px;
-}
+/* was: f8f8f7 */
+table tbody tr{background:#45494a}
+table tr.even,table tr.alt,table tr:nth-of-type(even){background:#626262}
 
-h4, h5 {
-  font-size: 14px;
-}
+/* was f7f8f7 */
+table thead,table tfoot{background:#626262}
+tbody tr th{background:#626262}
 
-.title {
-  font-size: 11px;
-  line-height: 1.4;
-  color: #FF6B68;
-  font-weight: bold;
-  margin-top: 3px;
-  margin-bottom: 6px;
-}
+/* was: 7a2518 */
+.sidebarblock>.content>.title,#toctitle,.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{color: #ba3925}
 
-.admonitionblock .title {
-  color: #BBB529;
-}
+/* was: f8f8f7 */
+.sidebarblock, .exampleblock, .exampleblock>.content {background:#626262; border-color: #626262; box-shadow: 0 1px 4px #626262}
 
-hr {
-  border: solid #dddddd;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 15px 0;
-  height: 0;
-}
+/* was: f7f7f8 */
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock pre:not(.highlight),.listingblock pre[class="highlight"],.listingblock pre[class^="highlight "],.listingblock pre.CodeRay,.listingblock pre.prettyprint{background:#626262}
 
-p, ul, ol, dl {
-  line-height: 1.4;
-  margin-bottom: 15px;
-}
-
-ul, ol {
-  list-style-position: outside;
-  margin-left: 18px;
-}
-
-ul li ul,
-ol li ol,
-ul li ol,
-ol li ul {
-  margin-left: 15px;
-  margin-bottom: 0;
-}
-
-.colist ol li {
-  font-size: 11px;
-}
-
-.colist ol li p {
-  font-size: 11px;
-  margin-bottom: 6px;
-}
-
-dl dt {
-  margin-bottom: 4px;
-  font-weight: bold;
-}
-
-dl dd {
-  margin-bottom: 15px;
-}
-
-code {
-  font-size: 11px;
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-  color: #6897BB;
-  /*background-color: #f2f2f2;*/
-}
-
-em {
-  font-style: italic;
-}
-
-strong {
-  font-weight: bold;
-}
-
-a {
-  color: #287BDE;
-  text-decoration: underline;
-}
-
-a img {
-  border: none;
-}
-
-.literalblock,
-.listingblock {
-  margin-bottom: 15px;
-}
-
-.listingblock pre,
-.literalblock pre {
-  font-family: Consolas, "Liberation Mono", Courier, monospace;
-  font-size: 11px;
-  line-height: 1.4;
-  border-width: 1px 0;
-  border-style: dotted;
-  border-color: #bfbfbf;
-  padding: 9px;
-}
-
-.listingblock {
-  background-color: #595c5d;
-}
-
-.listingblock pre code,
-.literalblock pre code {
-  color: inherit;
-  font-size: 11px;
-}
-
-.line-through {
-  text-decoration: line-through;
-}
-
-/*.subheader, .admonitionblock td.content > .title, .audioblock > .title,*/
-/*.exampleblock > .title, .imageblock > .title, .listingblock > .title,*/
-/*.literalblock > .title, .stemblock > .title, .openblock > .title,*/
-/*.paragraph > .title, .quoteblock > .title, table.tableblock > .title,*/
-/*.verseblock > .title, .videoblock > .title, .dlist > .title, .olist > .title,*/
-/*.ulist > .title, .qlist > .title, .hdlist > .title {*/
-/*line-height: 1.45;*/
-/*color: #d6b339;*/
-/*font-weight: 400;*/
-/*margin-top: 0;*/
-/*margin-bottom: .25em*/
-/*}*/
+#toc {background-color:#626262 !important; border-color:#626262 !important;}
